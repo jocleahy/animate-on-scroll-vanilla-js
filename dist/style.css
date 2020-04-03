@@ -21,15 +21,11 @@ body {
 img {
   width: 100%;
 }
-.fade-in {
+img.can-animate {
   opacity: 0;
 }
 .fade-in.active {
   animation: fadeIn 0.3s ease-in forwards;
-}
-.slide-left {
-  opacity: 0;
-  transform: translateX(-50px);
 }
 .slide-left.active {
   animation: slideLeft 0.5s ease-in forwards;
