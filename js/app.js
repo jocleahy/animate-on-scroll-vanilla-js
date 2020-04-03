@@ -16,13 +16,23 @@ function debounce(func, wait = 20, immediate) {
 }
 
 
-
-
 // select all images with the animate class
 const aniImgs = document.querySelectorAll('.can-animate');
 
+function init() {
+    aniImgs.forEach(aniImg => {
+        const aniClass = aniImg.dataset.animation;
+        const aniDuration = aniImg.dataset.duration;
+        aniImg.classList.add(aniClass);
+        aniImg.style.animationDuration = `${aniDuration}s`;
+    })
+}
+
+
+
 function scrollCheck(e) {
     aniImgs.forEach(aniImg => {
+
         // calc bottom of viewport
         const viewBot = window.innerHeight + window.scrollY;
 
@@ -48,4 +58,6 @@ function scrollCheck(e) {
     })
 }
 window.addEventListener('scroll', debounce(scrollCheck));
+
+init()
 
