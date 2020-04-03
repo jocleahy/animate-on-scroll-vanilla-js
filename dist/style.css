@@ -30,6 +30,19 @@ img.can-animate {
 .slide-left.active {
   animation: slideLeft 0.5s ease-in forwards;
 }
+.slide-right.active {
+  animation: slideRight 0.5s ease-in forwards;
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 @keyframes slideLeft {
   from {
     opacity: 0;
